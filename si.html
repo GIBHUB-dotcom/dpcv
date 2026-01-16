@@ -6,6 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Asi si me gusta! </title>
+
+    <style>
+    
+    .extra-message {
+      font-size: 1.4em;
+      color: #ff1493;
+      margin: 40px auto 80px;
+      max-width: 800px;
+      animation: fadeIn 4s ease-in-out;
+      text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 12px rgba(255, 255, 255, 0.5);
+      line-height: 1.6;
+      padding: 0 20px;
+      user-select: text;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .falling {
+      position: fixed;
+      top: -50px;
+      pointer-events: none;
+      animation: fall linear infinite;
+      user-select: none;
+      z-index: 10;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    .rising {
+      position: fixed;
+      bottom: -50px;
+      pointer-events: none;
+      animation: rise linear infinite;
+      user-select: none;
+      z-index: 10;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-110vh) rotate(-360deg); opacity: 0; }
+    }
+
+    .sunflowers {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .sunflowers span {
+      font-size: 2em;
+      margin: 5px;
+      animation: sway 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes sway {
+      from { transform: rotate(-10deg); }
+      to { transform: rotate(10deg); }
+    }
+
+    .extra-message {
+        font-size: 1.1em;
+        margin: 30px auto 60px;
+        max-width: 90%;
+      }
+      .sunflowers span {
+        font-size: 1.5em;
+        margin: 3px;
+      }
+      .falling, .rising {
+        font-size: 15px !important;
+      }
+      
+</style>
+    
 </head>
 
 <body>
@@ -46,5 +136,6 @@
     }
   </script>
 </body>
+
 
 </html>
